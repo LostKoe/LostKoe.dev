@@ -45,6 +45,7 @@ header {
         padding: 20px;
         background: var(--color-accent);
         box-shadow: 0px 0px 50px 0.5px var(--color-text);
+        z-index: 1;
 }
 
 nav ul {
@@ -115,13 +116,13 @@ nav ul li:hover a {
         cursor: pointer;
 }
 
-img {
+#home img {
         border-radius: 100%;
         box-shadow: 0px 0px 5px var(--color-white);
         transition: box-shadow 0.5s;
 }
 
-img:hover {
+#home img:hover {
         box-shadow: 0px 0px 50px 5px var(--color-secondary)
 }
 
@@ -153,10 +154,56 @@ h3 {
         background: var(--color-surface);
         border: 5px solid var(--color-secondary);
         border-radius: 50px;
-        width: 500px;
-        height: 300px;
+        min-width: 300px;
+        height: 400px;
+        transition: transform 0.3s;
 }
 
-#about #about-left svg:hover {
-        fill: red;
+#about #about-left:hover {
+        transform: scale(1.05)
+}
+
+#about #about-right {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+}
+
+svg {
+        min-width: 50px;
+        max-width: 100px;
+        min-height: 50px;
+        max-height: 100px;
+        fill: var(--color-primary);
+}
+
+#hability-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 75px;
+        margin-top: 20px;
+}
+
+.hability {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+        background: var(--color-surface);
+        padding: 20px;
+        border-radius: 20px;
+        border: 3px solid transparent;
+        transition: border 0.3s, transform 0.3s;
+}
+
+.hability:hover {
+        border: 3px solid var(--color-white);
+        transform: translateY(-10px);
 }

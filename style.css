@@ -77,13 +77,11 @@ nav ul li a:hover {
         text-decoration: underline;
 }
 
-/* Garante largura visível ao menu */
 #hamburguer-items {
         position: absolute;
         top: 100%;
-        right: 0;
+        right: 0; 
         max-width: 300px;
-        background: #161b22;
         padding: 15px;
         border-radius: 10px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -93,10 +91,14 @@ nav ul li a:hover {
         transition: all 0.3s ease;
         z-index: 998;
         display: block;
-        /* ← força a renderização completa */
         width: auto;
-        /* flexível */
         min-width: 250px;
+}
+
+#hamburguer-items li a {
+        font-size: 16px;
+        background: var(--color-surface);
+        border-radius: 5px;
 }
 
 #hamburguer-appearance {
@@ -113,33 +115,6 @@ nav ul li a:hover {
         background: white;
         border-radius: 2px;
 }
-
-#hamburguer-items.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-}
-
-#hamburguer-items ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-}
-
-#hamburguer-items li a {
-        display: block;
-        color: var(--color-white);
-        font-size: 16px;
-        text-align: center;
-        padding: 10px;
-        background: var(--color-surface);
-        border-radius: 5px;
-}
-
-
 
 #home {
         display: flex;
@@ -339,46 +314,13 @@ footer {
         padding: 50px;
 }
 
-/* Medias Queries */
 @media (max-width: 767px) {
-        nav ul {
-                display: none;
-                /* esconde menu horizontal em telas pequenas */
-        }
-
-        #hamburguer-appearance {
-                display: flex;
-                /* mostra o botão hamburguer */
-        }
-
-        #hamburguer-items {
-                display: block;
-                /* mostra o menu hamburguer */
-        }
-
-        #hamburguer-items ul {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-        }
-
         nav {
                 position: relative;
         }
 
-        #hamburguer-appearance {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                cursor: pointer;
-                z-index: 100;
-        }
-
-        #hamburguer-appearance span {
-                width: 30px;
-                height: 3px;
-                background-color: var(--color-white);
-                border-radius: 2px;
+        nav ul {
+                display: none;
         }
 
         #hamburguer-items {
@@ -412,9 +354,7 @@ footer {
 
         #hamburguer-items li a {
                 display: block;
-                /* garante visibilidade */
                 color: var(--color-white);
-                /* cor visível sobre fundo escuro */
                 font-weight: bold;
                 padding: 10px;
                 text-align: center;

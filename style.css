@@ -303,9 +303,41 @@ svg {
         transform: translateY(5px);
 }
 
-#contact p {
-        text-align: center;
-        margin: 50px 0px;
+#contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 50px;
+}
+
+.contact {
+        background: var(--color-surface);
+        padding: 75px;
+        border-radius: 100%;
+        border: 3px solid transparent;
+        transition: transform 0.3s, border 0.3s;
+}
+
+.contact:hover {
+        transform: scale(1.1);
+        border: 3px solid var(--color-white)
+}
+
+.contact a {
+        color: var(--color-primary);
+        text-decoration: none;
+        transition: color 0.3s;
+}
+
+.contact a:hover {
+        text-decoration: underline;
+        color: var(--color-accent)
+}
+
+.contact a:active {
+        color: var(--color-white);
 }
 
 footer {

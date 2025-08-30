@@ -7,4 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   alert("Há uma nova versão deste portfólio em lostkoe.github.io/Portfolio-LostKoe\nTambém aproveite e veja o repositório dele em github.com/LostKoe/Portfolio-LostKoe")
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
 });
